@@ -42,6 +42,8 @@ float realizarDeposito(float saldo){
 float realizarSaque(float saldo){
     float valor;
 
+    limparTela();
+
     printf("--------------------\n");
     printf("SAQUE \n");
     printf("--------------------\n");

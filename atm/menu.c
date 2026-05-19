@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "menu.h"
 
-void menu(){
+void exibirMenu(){
     printf("==============================\n");
     printf(" CAIXA ELETRONICO \n");
     printf("==============================\n");

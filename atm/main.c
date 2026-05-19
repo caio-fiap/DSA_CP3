@@ -11,7 +11,7 @@ int main(){
         exibirMenu();
         scanf("%d", &opcao);
 
-        if(scanf("%d", &opcao) != 1){
+        if(opcao < 0 || opcao > 3){
             printf("Entrada Invalida");
             limparBuffer();
             pausarSistema();
