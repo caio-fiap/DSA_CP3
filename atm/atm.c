@@ -19,9 +19,9 @@ void consultarSaldo(float saldo){
     printf("SALDO ATUAL \n");
     printf("R$ %.2f\n", saldo);
     printf("--------------------\n");
-    
+
     printf("\nPressione Enter para continuar...");
-    setbuf(stdin, NULL);
+    while(getchar() != '\n');
     getchar();
 }
 
@@ -37,7 +37,7 @@ float realizarDeposito(float saldo){
     }
 
     printf("\nPressione Enter para continuar...");
-    setbuf(stdin, NULL);
+    while(getchar() != '\n');
     getchar();
 
     return saldo;
@@ -49,7 +49,7 @@ float realizarSaque(float saldo){
     scanf("%f", &valor);
     if (valor > 5000){
         printf("Limite diario excedido\n");
-    } else if(valor < 0 || valor >= saldo) {
+    } else if(valor <= 0 || valor > saldo) {
         printf("Saldo insuficiente ou valor invalido\n");
     } else {
         saldo -= valor;
@@ -57,7 +57,7 @@ float realizarSaque(float saldo){
     }
 
     printf("\nPressione Enter para continuar...");
-    setbuf(stdin, NULL);
+    while(getchar() != '\n');
     getchar();
 
     return saldo;
