@@ -6,9 +6,17 @@ Guilherme de Oliveira Santos
 Luiz Cesar Conti Salvador  
 
 ## Descrição do Sistema
-O sistema simula o funcionamento de um caixa eletrônico (ATM).
+Sistema de caixa eletrônico desenvolvido em linguagem C para realizar operações bancárias simples.  
 
 ## Funcionalidades Implementadas  
-O sistema simula um ATM com funções de Saque, Depósito e Consulta de Saldo
+- Consulta de saldo
+- Saques
+- Depósitos
+- Validação de valores
+- Limite de saque
 
 ## Instruções de Compilação e Execução  
+Compilar: gcc src/*.c -o caixa  
+Executar:  
+* No Windows: ./caixa
+* No linux/Mac: caixa.exe
