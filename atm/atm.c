@@ -13,9 +13,15 @@ void menu(){
     printf(" Escolha uma opcao \n");
 }
 
-
+float consultarSaldo(float saldo){
+    printf("\n --- SALDO ATUAL ---  \n");
+    printf("R$ %.2f\n", saldo);
+    printf("--------------------\n");
+    system("pause");
+}
 
 int main(){
+    float saldo;
     int opcao;
     do{
         system("cls");
@@ -33,7 +39,7 @@ int main(){
             case 1:
             consultarSaldo(saldo);
             break;
-            case 2:
+            /* case 2:
             saldo = realizarSaque(saldo);
             break;
             case 3:
@@ -41,7 +47,7 @@ int main(){
             break;
             case 0:
             printf("Saindo... \n");
-            break;
+            break; */
             default:
             printf("Opcao invalida!\n");
         }
