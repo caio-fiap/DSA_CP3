@@ -20,6 +20,20 @@ float consultarSaldo(float saldo){
     system("pause");
 }
 
+float realizarDeposito(float saldo){
+    float valor;
+    printf("Digite o valor a ser depositado: R$");
+    scanf("%f", &valor);
+    if (valor > 0){
+        saldo += valor;
+        printf("Deposito realizado!\n");
+    } else  {
+        printf("Valor invalido!");
+    }
+    return saldo;
+}
+
+
 int main(){
     float saldo;
     int opcao;
