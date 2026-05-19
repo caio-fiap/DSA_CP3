@@ -14,10 +14,14 @@ void menu(){
 }
 
 float consultarSaldo(float saldo){
-    printf("\n --- SALDO ATUAL ---  \n");
+    system("cls");
+    printf("--------------------\n");
+    printf("SALDO ATUAL \n");
     printf("R$ %.2f\n", saldo);
     printf("--------------------\n");
-    system("pause");
+    printf("\nPressione Enter para continuar...");
+    setbuf(stdin, NULL);
+    getchar();
 }
 
 float realizarDeposito(float saldo){
@@ -30,7 +34,9 @@ float realizarDeposito(float saldo){
     } else  {
         printf("Valor invalido!");
     }
-    
+    printf("\nPressione Enter para continuar...");
+    setbuf(stdin, NULL);
+    getchar();
     return saldo;
 }
 
@@ -38,12 +44,17 @@ float realizarSaque(float saldo){
     float valor;
     printf("Valor a ser sacado: R$ ");
     scanf("%f", &valor);
-    if (valor <= saldo && valor > 0){
-        saldo -= valor;
+    if (valor > 5000){
+        printf("Limite diario excedido\n");
+    } else if(valor < 0 || valor >= saldo) {
+        printf("Saldo insuficiente ou valor invalido\n");
     } else {
-        printf("Saldo insuficiente ou valor invalido");
+        saldo -= valor;
+        printf("Saque autorizado!\n");
     }
-
+    printf("\nPressione Enter para continuar...");
+    setbuf(stdin, NULL);
+    getchar();
     return saldo;
 }
 
@@ -66,11 +77,11 @@ int main(){
             case 1:
             consultarSaldo(saldo);
             break;
-            /* case 2:
+            case 2:
             saldo = realizarSaque(saldo);
-            break;*/
+            break;
             case 3:
-            realizarDeposito(saldo);
+            saldo = realizarDeposito(saldo);
             break;
             case 0:
             printf("Saindo... \n");
