@@ -22,7 +22,7 @@ float consultarSaldo(float saldo){
 
 float realizarDeposito(float saldo){
     float valor;
-    printf("Digite o valor a ser depositado: R$");
+    printf("Digite o valor a ser depositado: R$ ");
     scanf("%f", &valor);
     if (valor > 0){
         saldo += valor;
@@ -30,9 +30,22 @@ float realizarDeposito(float saldo){
     } else  {
         printf("Valor invalido!");
     }
+    
     return saldo;
 }
 
+float realizarSaque(float saldo){
+    float valor;
+    printf("Valor a ser sacado: R$ ");
+    scanf("%f", &valor);
+    if (valor <= saldo && valor > 0){
+        saldo -= valor;
+    } else {
+        printf("Saldo insuficiente ou valor invalido");
+    }
+
+    return saldo;
+}
 
 int main(){
     float saldo;
@@ -55,13 +68,13 @@ int main(){
             break;
             /* case 2:
             saldo = realizarSaque(saldo);
-            break;
+            break;*/
             case 3:
-            dep = realizarDeposito(saldo);
+            realizarDeposito(saldo);
             break;
             case 0:
             printf("Saindo... \n");
-            break; */
+            break;
             default:
             printf("Opcao invalida!\n");
         }
